@@ -1,29 +1,105 @@
 <html>
 <head>
-<!-- Basic Page Info -->
-<title>Munchies102C</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- CSS -->
+	<meta charset="utf-8" />
+	
+	<!-- Include to ensure responsive pages are displayed correctly -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Bootstrap and custom CSS -->
 <link href="/css/bootstrap.min.css" rel="stylesheet">
 <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 <link href="/css/munchies.css" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Mootools -->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools-yui-compressed.js"></script>
+	
+	<!-- Fav & iOS icons location -->
+  </head>
 
-<!-- JavaScript -->
-
-
-</head>
 <body>
-    UCSD COGS102C TEAM MUNCHIES    
-    <img src="../images/pc.jpg"/>
-        &nbsp;
-</body>
-<footer>    
-    <!-- PC Image -->
+<header>
+    <script>
+        window.addEvent('domready',function() {
+            $$('a.collapseNav').addEvent('click',  function(e) {
+                e.preventDefault();
+                if($('nav').getStyle('display') == 'none') {
+                    $('nav').setStyle('display','block');                 
+                } else $('nav').setStyle('display','none');
+                
+            });
+            window.addEvent('resize', function(){
+              if(window.getSize().x > 480 ) {
+                    $('nav').setStyle('display','block');             
+              } else {
+                    $('nav').setStyle('display','none');   
+              }
+            });
+       });
+    </script>
+    
+    <div class='row'>
+        <div class='logo span3 bordered'>UCSD MUNCHIES</div>    
+    </div>
+    <!-- Nav -->
+    <div class='row'>
+        <div class='nav_collapse'><a href='#collapse' class='collapseNav' data=''>Site Map</a></div>
+    </div>
+    <div class='row'>
+        <div class='span12'>
+            <nav class='bordered' id="nav">
 
-	<div class="col-xs-3">
-		<a href="/teaminfo"><span class="glyphicon glyphicon-list focusme"></span></a>
+                <li>       
+                    <a href="/info"> Sustain</a>       
+
+                </li>
+
+                <li>     
+                    <a href="/ucsd"> UCSD</a>
+
+                </li>
+                <li>     
+                    <a href="/teaminfo"> Team</a>
+
+                </li>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<div role='main'>
+    <!-- Main -->
+
+    <div class='row'>
+        <div class='welcome span12 bordered'>
+            <h2>Hello Potential UCSD Sustainer!</h2>
+            <p>UCSD Munchies is here to educate and inform students about sustainability in food consumption.</p>
+        </div>     
+    </div>
+</div>
+    <div class='row'>
+        <div class='banner visible-desktop span8 bordered'>Banner</div>
+        <div class='banner visible-tablet visibile-phone span12 bordered'>Banner</div>
+        <div class='home_action span4 bordered'>Call to Action</div>     
+    </div>
+<!-- Footer -->
+<footer>
+    <div class='row'>
+        <div class='contact_form span4 bordered'>
+            <form>
+                                
+            </form>
+        </div>
+        <div class='contact_address span4 bordered'>
+        </div>
+        <div class='contact_social span4 bordered'>
+            <h3></h3>
+        </div>
+		
 	</div>
 </footer>
+</body>
 </html>

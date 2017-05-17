@@ -1,52 +1,49 @@
-/* ========= CENTER TO MOBILE SIZE ======== */
-#background {
-  background-color: #d7d7d7;
-}
-.outer {
-  display: table;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
-.inner {
-  max-width: 100%;
-  height: 100%;
-  background-color: white;
-  margin: 0 auto;
+body { background: url(../images/ruler.png) top left no-repeat; }
+
+/* Miscellaneous */ 
+.bordered { border: 1px solid black; }
+
+/* Header */
+.logo { height: 88px; margin-bottom: 15px; }
+.nav_collapse { height: 40px; display: none; }
+nav { min-height: 40px; width: 100%;   margin-bottom: 15px; }
+nav li { float: left; line-height: 40px; padding: 0 20px; list-style: none; }
+
+/* Main */
+.banner { height: 169px;  margin-bottom: 15px; }
+.home_action { height: 169px;  margin-bottom: 15px; }
+.welcome { height: 139px;  margin-bottom: 15px; }
+
+/* Footer */
+.contact_form { height: 260px;  margin-bottom: 15px; }
+.contact_address { height: 260px;  margin-bottom: 15px; }
+.contact_social { height: 260px;  margin-bottom: 15px; }
+
+
+ /* Landscape phones and down */
+@media (max-width: 480px) { 
+    .nav_collapse { display: block }
+    #nav {  }
+    nav { display: none; }
+    nav li  { float: none; }
+    
+    .home_action { display: none; }
+    .contact_address { display: none; }
 }
 
-/* ================= FOOTER-NAV =================*/
-footer {
-    position:relative;
-    clear:both;
-    z-index: 10;
-    display: inline-block;
-    width: 100%;
-    background-color: white;
-    margin: auto;
-    border-top: -1em;
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+    .contact_social { display: none; }
+    .home_action { display: none; }
 }
 
-footer .col-xs-3 {
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-}
-footer .glyphicon-list {
-    margin: auto;
-    font-size: 2.5em;
-}
-footer .glyphicon-home {
-    margin: auto;
-    font-size: 2.5em;
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { 
+    .home_action { display: none; }
 }
 
-footer .col-xs-3 a {
-    text-decoration: none;
-    color: #999;
-}
-footer .focusme {
-  color: black !important;
-  /*text-decoration: underline !important;*/
+/* Large desktop */
+@media (min-width: 1200px) { 
+    nav { max-width: 1200px !important; }
 }
 
