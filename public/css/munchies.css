@@ -1,8 +1,14 @@
-body { background: url(../images/ruler.png) top left no-repeat; }
-
-/* Miscellaneous */ 
+body {
+}
+.img{
+        position: absolute;
+        width: 75%; /*the image width*/
+        height: 66%; /*the image height*/
+        margin-left: -50px; /*half the image width*/
+    }
+/* Miscellaneous  
 .bordered { border: 1px solid black; }
-
+*/
 /* Header */
 .logo { height: 88px; margin-bottom: 15px; }
 .nav_collapse { height: 40px; display: none; }
