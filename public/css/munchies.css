@@ -21,9 +21,9 @@ nav li { float: left; line-height: 40px; padding: 0 20px; list-style: none; }
 .welcome { height: 139px;  margin-bottom: 15px; }
 
 /* Footer */
-.contact_form { height: 330px;  margin-bottom: 15px; }
-.contact_address { height: 330px;  margin-bottom: 15px; }
-.contact_social { height: 330px;  margin-bottom: 15px; }
+.contact_form { height: 330px; width: 200px; margin-bottom: 15px; }
+.contact_address { height: 330px; width: 200px;  margin-bottom: 15px; }
+.contact_social { height: 330px; width: 200px;  margin-bottom: 15px; }
 
 
  /* Landscape phones and down */
